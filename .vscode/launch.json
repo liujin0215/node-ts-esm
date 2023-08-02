@@ -1,0 +1,41 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Launch Program",
+            "program": "src/main.ts",
+            "runtimeArgs": [
+                "--loader",
+                "ts-node/esm",
+            ],
+            "env": {
+                "NODE_ENV": "development",
+            },
+            "skipFiles": [
+                "<node_internals>/**"
+            ]
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Func Unit Tests",
+            "runtimeExecutable": "yarn",
+            "args": [
+                "mocha",
+                "--",
+                "${file}",
+                "-g",
+                "${selectedText}"
+            ],
+            "env": {
+                "NODE_ENV": "development",
+            },
+            "internalConsoleOptions": "openOnSessionStart",
+            "skipFiles": [
+                "<node_internals>/**"
+            ]
+        }
+    ]
+}

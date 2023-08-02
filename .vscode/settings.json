@@ -1,0 +1,6 @@
+{
+  "javascript.preferences.importModuleSpecifierEnding": "js",
+  "javascript.preferences.quoteStyle": "double",
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+}
